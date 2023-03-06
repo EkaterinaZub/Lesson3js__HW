@@ -138,8 +138,7 @@
         }
         sum += +a[1];
         average=sum/i;
-         
-        
+                 
     }
     console.log(sum);
         console.log(average); 
@@ -149,6 +148,25 @@
 // task 9
 // Дана строка с числами разделенными пробелами «4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36
 // 8 57». Найдите самое большое и самое маленькое число в строке, используя цикл.
+
+{
+    let str="4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57"
+    let cur='', min, max;
+
+for (let i = 0; i < str.length; i++) {
+  cur =cur+ str[i];
+  if (+str[i] && !+str[i+1]) {
+    if (typeof min !== 'number' || cur < +min)
+     {min = +cur;}
+    if (typeof max !== 'number' || cur > +max) 
+    {max = +cur;
+    cur = '';
+  }}
+}
+
+console.log('Минимальное число', min)
+console.log(`Максимальное число` , max)
+}
 
 
 
